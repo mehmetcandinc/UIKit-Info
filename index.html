@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script>
+      /*NOTIFICATION*/
+      window.onload = function () {
+        UIkit.notification({
+          message:
+            "<span id=notification class='uk-text-warning uk-text-meta'> 7.Notification</span>",
+          timeout: 2400,
+        });
+        UIkit.notification({
+          message:
+            "Bu sitenin <span class='uk-text-primary'> tamamı UIKit </span> materyalleri ile hazırlanmıştır.",
+          timeout: 3000,
+        });
+      };
+    </script>
+    <title>UIKit Tanıtım</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR + STICKY -->
+    <nav
+      id="navbar sticky"
+      class="uk-navbar-container"
+      uk-navbar="dropbar: true"
+      uk-sticky="show-on-up: true; animation: uk-animation-slide-top"
+    >
+      <div class="uk-navbar-left">
+        <li class="uk-text-warning uk-text-meta uk-list">6.Navbar</li>
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="#">Aktif</a></li>
+          <li>
+            <a href="#">Ana</a>
+            <div
+              class="uk-dropbar uk-dropbar-top"
+              uk-drop="stretch: x; animation:slide-top; animate-out:true "
+            >
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-text-warning uk-text-meta">6.1Dropbar</li>
+                <li class="uk-active"><a href="#">Aktif</a></li>
+                <li><a href="#">Öge</a></li>
+                <li><a href="#">Öge</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Öge</a></li>
+        </ul>
+        <span
+          uk-tooltip="Sayfayı aşağı indirirken hafif yukarı scroll yapıldıktan sonra
+          aktif olur. <span class='uk-text-meta uk-text-warning'>15.1 Show On Up</span>"
+          class="uk-text-warning uk-text-meta"
+          >15.Sticky</span
+        >
+      </div>
+      <div class="uk-navbar-right">
+        <li class="uk-text-warning uk-text-meta">Daha Fazla--></li>
+        <a uk-tooltip="Medium" href="" target="_blank" class="uk-icon-button"
+          ><span
+            class="uk-icon uk-icon-image"
+            style="background-image: url(images/medium-logo.png)"
+          ></span
+        ></a>
+        <a
+          uk-tooltip="Linkedin"
+          href="https://www.linkedin.com/in/mehmetcandinc/"
+          target="_blank"
+          class="uk-icon-button"
+          uk-icon="linkedin"
+        ></a>
+        <a
+          uk-tooltip="Github"
+          href=""
+          target="_blank"
+          class="uk-icon-button"
+          uk-icon="github"
+        ></a>
+        <a
+          uk-tooltip="UIkit"
+          href="https://getuikit.com/"
+          target="_blank"
+          class="uk-icon-button uk-margin-right"
+          uk-icon="uikit"
+        ></a>
+      </div>
+    </nav>
+
+    <!-- FLEX -->
+    <div class="uk-flex uk-flex-center uk-margin">
+      <div
+        class="uk-card uk-card-default uk-card-body uk-margin-right uk-flex-first"
+      >
+        <p class="uk-text-warning uk-text-meta">
+          3.Flex <br /><span class="uk-text-meta"
+            >F12 ile div sırasını inceleyebilirsiniz..</span
+          >
+        </p>
+      </div>
+      <div
+        class="uk-card uk-card-default uk-card-body uk-margin-left uk-flex-last"
+      >
+        Öge-1
+      </div>
+      <div
+        class="uk-card uk-card-default uk-card-body uk-margin-right uk-flex-first"
+      >
+        Öge-2
+      </div>
+      <div
+        class="uk-card uk-card-default uk-card-body uk-margin-left uk-margin-right"
+      >
+        Öge-3
+      </div>
+    </div>
+
+    <!-- OFFCANVAS + NAV -->
+    <div class="uk-flex uk-flex-center uk-margin">
+      <div class="uk-card uk-card-default uk-card-body uk-margin-right">
+        <span class="uk-text-warning uk-text-meta"> 8.Off-canvas </span>
+        <a href="#offcanvas-slide" class="uk-button uk-button-default" uk-toggle
+          >Off-canvas'ı Aç</a
+        >
+      </div>
+      <div id="offcanvas-slide" uk-offcanvas>
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav-default" uk-nav>
+            <li class="uk-nav-header uk-text-capitalize uk-text-warning">
+              5.2 Nav in Offcanvas
+            </li>
+            <li class="uk-nav-divider"></li>
+            <li class="uk-active"><a href="#">Aktif</a></li>
+            <li class="uk-parent">
+              <a href="#"
+                >Ana
+                <span class="uk-text-warning uk-text-meta"
+                  >(5.1 Nav>Accardion)</span
+                ></a
+              >
+              <ul class="uk-nav-sub">
+                <li><a href="#">Alt Öge</a></li>
+                <li><a href="#">Alt Öge</a></li>
+                <ul>
+                  <li><a href="#">Alt-Alt Öge</a></li>
+                  <li><a href="#">Alt-Alt Öge</a></li>
+                </ul>
+              </ul>
+            </li>
+            <li class="uk-parent">
+              <a href="">Ana-2</a>
+              <ul class="uk-nav-sub">
+                <li><a href="#">Alt-2 Öge</a></li>
+                <li><a href="#">Alt-2 Öge</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2 class="uk-heading-line uk-text-center uk-text-warning">
+                <span>5.Nav</span>
+              </h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LIGHTBOX -->
+      <div
+        class="uk-card uk-card-default uk-card-body uk-margin-right"
+        uk-lightbox
+      >
+        <span class="uk-text-warning uk-text-meta"> 4.Lightbox </span>
+
+        <a
+          class="uk-button uk-button-default"
+          href="images/photo-4.jpg"
+          data-caption="Peter Nguyen"
+          >Lightbox'ı Aç</a
+        >
+      </div>
+    </div>
+
+    <!-- SORTABLE -->
+    <ul
+      class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s"
+      uk-sortable="handle: .uk-sortable-handle"
+      uk-grid
+    >
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          ><span class="uk-text-meta uk-text-warning">14.Sortable</span>
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          ><span class="uk-text-meta"> Icon'dan tutup sürükleyin.</span>
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          ><span class="uk-text-meta"> İstediğiniz alana yerleştirin.</span>
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          >Öge 1
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          >Öge 2
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          >Öge 3
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          >Öge 4
+        </div>
+      </li>
+      <li>
+        <div class="uk-card uk-card-default uk-card-body">
+          <span
+            class="uk-sortable-handle uk-margin-small-right uk-text-center"
+            uk-icon="icon: table"
+          ></span
+          >Öge 5
+        </div>
+      </li>
+    </ul>
+
+    <!-- SCROLLSPY -->
+    <div
+      class="uk-child-width-1-3@m uk-margin"
+      uk-grid
+      uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true"
+    >
+      <div>
+        <div class="uk-card uk-card-default uk-card-body">
+          <h3 class="uk-card-title uk-text-meta uk-text-warning">
+            11.Scrollspy
+          </h3>
+          <p class="uk-text-meta">
+            Görünürden çıktığında kaybolur, tekrar ekrana girdiğinde yavaş
+            açılış ile ekranda belirir.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body">
+          <h3 class="uk-card-title">Fade(Animasyon Adı)</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body">
+          <h3 class="uk-card-title">Fade(Animasyon Adı)</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER NOT FINISHED(?) -->
+    <div uk-filter="target: .js-filter; animation: delayed-fade uk-margin">
+      <ul class="uk-subnav uk-subnav-pill">
+        <li class="uk-text-warning uk-text-meta">2.Filter</li>
+        <li class="uk-active" uk-filter-control><a href="#">Hepsi</a></li>
+        <li uk-filter-control=".tag-white"><a href="#">Beyaz</a></li>
+        <li uk-filter-control=".tag-orange"><a href="#">Turuncu</a></li>
+        <li uk-filter-control=".tag-black"><a href="#">Siyah</a></li>
+      </ul>
+      <ul
+        class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center"
+        uk-grid
+      >
+        <li class="tag-white">
+          <div class="uk-card uk-card-default uk-card-body">Öge</div>
+        </li>
+        <li class="tag-orange">
+          <div class="uk-card uk-card-primary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-white">
+          <div class="uk-card uk-card-default uk-card-body">Öge</div>
+        </li>
+        <li class="tag-white">
+          <div class="uk-card uk-card-default uk-card-body">Öge</div>
+        </li>
+        <li class="tag-black">
+          <div class="uk-card uk-card-secondary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-black">
+          <div class="uk-card uk-card-secondary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-orange">
+          <div class="uk-card uk-card-primary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-black">
+          <div class="uk-card uk-card-secondary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-orange">
+          <div class="uk-card uk-card-primary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-white">
+          <div class="uk-card uk-card-default uk-card-body">Öge</div>
+        </li>
+        <li class="tag-orange">
+          <div class="uk-card uk-card-primary uk-card-body">Öge</div>
+        </li>
+        <li class="tag-black">
+          <div class="uk-card uk-card-secondary uk-card-body">Öge</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- DOTNAV + OVERLAY-->
+    <div class="uk-position-relative uk-light uk-margin" uk-slideshow>
+      <div
+        class="uk-slideshow-items uk-inline uk-height-medium uk-flex uk-flex-center uk-flex-middle"
+      >
+        <div>
+          <img src="images/photo-1.jpg" alt="view-1" uk-cover />
+          <div
+            class="uk-overlay uk-position-bottom-left uk-position-small uk-text-warning"
+          >
+            <p class="uk-overlay-primary uk-text-warning uk-text-meta">
+              9.Overlay
+            </p>
+          </div>
+          <div class="uk-overlay uk-position-bottom">
+            <span class="uk-text-warning">--></span> Cristina Gottardi<span
+              class="uk-text-warning"
+              ><--</span
+            >
+          </div>
+        </div>
+        <div>
+          <img src="images/photo-2.jpg" alt="view-2" uk-cover />
+          <div
+            class="uk-overlay uk-position-bottom-left uk-position-small uk-text-warning"
+          >
+            <p class="uk-overlay-primary uk-text-warning uk-text-meta">
+              9.Overlay
+            </p>
+          </div>
+          <div class="uk-overlay uk-position-bottom">
+            <span class="uk-text-warning">--></span>Félix Lam<span
+              class="uk-text-warning"
+              ><--</span
+            >
+          </div>
+        </div>
+        <div>
+          <img src="images/photo-3.jpg" alt="view-3" uk-cover />
+          <div
+            class="uk-overlay uk-position-bottom-left uk-position-small uk-text-warning"
+          >
+            <p class="uk-overlay-primary uk-text-warning uk-text-meta">
+              9.Overlay
+            </p>
+          </div>
+          <div class="uk-overlay uk-position-bottom">
+            <span class="uk-text-warning">--></span>Paul Pastourmatzis
+            <span class="uk-text-warning"><--</span>
+          </div>
+        </div>
+      </div>
+      <div class="uk-position-bottom-center uk-position-medium">
+        <ul class="uk-dotnav">
+          <li class="uk-overlay-primary uk-text-warning uk-text-meta">
+            1.Dotnav-->
+          </li>
+          <li class="uk-nav-divider"></li>
+          <li uk-slideshow-item="0"><a href="#"></a></li>
+          <li uk-slideshow-item="1"><a href="#"></a></li>
+          <li uk-slideshow-item="2"><a href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SLIDER + TRANSITION -->
+    <div
+      class="uk-position-relative uk-visible-toggle uk-light uk-margin"
+      tabindex="-1"
+      uk-slider
+    >
+      <div
+        class="uk-slider-items uk-child-width-1-2 uk-child-width-1-1@s uk-child-width-1-2@m uk-height-large"
+      >
+        <div>
+          <div class="uk-transition-toggle" tabindex="0">
+            <div class="uk-position-center uk-panel">
+              <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+                >12.Slider</span
+              >
+              <h1>1</h1>
+            </div>
+            <img src="images/photo-1.jpg" alt="" />
+            <div
+              class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle"
+            >
+              <p class="uk-h3 uk-text-warning uk-margin-remove">
+                17.Transition
+              </p>
+            </div>
+            <div class="uk-overlay uk-position-bottom">Cristina Gottardi</div>
+          </div>
+        </div>
+        <div>
+          <img src="images/photo-2.jpg" alt="" />
+          <div class="uk-position-center uk-panel">
+            <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+              >12.Slider</span
+            >
+            <h1>2</h1>
+          </div>
+          <div class="uk-overlay uk-position-bottom">Félix Lam</div>
+        </div>
+        <div>
+          <img src="images/photo-4.jpg" alt="" />
+          <div class="uk-position-center uk-panel">
+            <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+              >12.Slider</span
+            >
+            <h1>3</h1>
+          </div>
+          <div class="uk-overlay uk-position-bottom">Peter Nguyen</div>
+        </div>
+        <div>
+          <img src="images/photo-1.jpg" alt="" />
+          <div class="uk-position-center uk-panel">
+            <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+              >12.Slider</span
+            >
+            <h1>4</h1>
+          </div>
+          <div class="uk-overlay uk-position-bottom">Cristina Gottardi</div>
+        </div>
+        <div>
+          <img src="images/photo-2.jpg" alt="" />
+          <div class="uk-position-center uk-panel">
+            <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+              >12.Slider</span
+            >
+            <h1>5</h1>
+          </div>
+          <div class="uk-overlay uk-position-bottom">Félix Lam</div>
+        </div>
+        <div>
+          <img src="images/photo-4.jpg" alt="" />
+          <div class="uk-position-center uk-panel">
+            <span class="uk-text-meta uk-text-warning uk-overlay-primary"
+              >12.Slider</span
+            >
+            <h1>6</h1>
+          </div>
+          <div class="uk-overlay uk-position-bottom">Peter Nguyen</div>
+        </div>
+      </div>
+
+      <a
+        class="uk-position-center-left uk-position-small uk-hidden-hover"
+        href
+        uk-slidenav-previous
+        uk-slider-item="previous"
+      ></a>
+      <a
+        class="uk-position-center-right uk-position-small uk-hidden-hover"
+        href
+        uk-slidenav-next
+        uk-slider-item="next"
+      ></a>
+    </div>
+
+    <!-- SLIDESHOW + PARALLAX + THUMBNAV -->
+    <div
+      class="uk-position-relative uk-visible-toggle uk-light"
+      tabindex="-1"
+      uk-slideshow
+    >
+      <div class="uk-slideshow-items">
+        <div class="uk-animation-kenburns">
+          <img src="images/photo-1.jpg" alt="" uk-cover />
+          <div class="uk-overlay uk-position-bottom">Cristina Gottardi</div>
+          <div
+            class="uk-height-large uk-overflow-hidden uk-light uk-flex uk-margin"
+          >
+            <div
+              class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical"
+            >
+              <p
+                uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; end: 50vh + 50%;"
+                class="uk-text-warning uk-overlay-primary"
+              >
+                10.Parallax<br />
+                <span class="uk-text-large">↓</span>
+              </p>
+              <h1
+                uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; end: 50vh + 50%;"
+              >
+                Başlık
+              </h1>
+              <p
+                uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; end: 50vh + 50%;"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p
+                class="uk-overlay-primary"
+                uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; end: 50vh + 50%;"
+              >
+                Kaydırınca olan efekt:
+                <span class="uk-text-meta uk-text-warning">
+                  13.1 Ken Burns Effect
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="images/photo-2.jpg" alt="" uk-cover />
+          <div class="uk-overlay uk-position-bottom">Félix Lam</div>
+        </div>
+        <div>
+          <img src="images/photo-3.jpg" alt="" uk-cover />
+          <div class="uk-overlay uk-position-bottom">Paul Pastourmatzis</div>
+        </div>
+      </div>
+      <div class="uk-position-bottom-center uk-position-small">
+        <ul class="uk-thumbnav">
+          <li
+            class="uk-text-meta uk-text-warning uk-overlay-primary uk-position-medium"
+          >
+            16.Thumbnav-->
+          </li>
+          <li uk-slideshow-item="0">
+            <a href="#"
+              ><img src="images/photo-1.jpg" width="100" height="67" alt=""
+            /></a>
+          </li>
+          <li uk-slideshow-item="1">
+            <a href="#"
+              ><img src="images/photo-2.jpg" width="100" height="67" alt=""
+            /></a>
+          </li>
+          <li uk-slideshow-item="2">
+            <a href="#"
+              ><img src="images/photo-3.jpg" width="100" height="67" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <a
+        class="uk-position-center-left uk-position-small uk-hidden-hover"
+        href
+        uk-slidenav-previous
+        uk-slideshow-item="previous"
+      ></a>
+      <a
+        class="uk-position-center-right uk-position-small uk-hidden-hover"
+        href
+        uk-slidenav-next
+        uk-slideshow-item="next"
+        ><span class="uk-text-meta uk-text-warning uk-overlay-primary"
+          ><--13.Slideshow→--></span
+        ></a
+      >
+    </div>
+  </body>
+</html>
